@@ -1,0 +1,26 @@
+{
+    "common": {
+        "template_dir": "D:\\tools\\mct\\new_cmake_templates"
+    },
+    "cmake": {
+        "exec": "cmake"
+    },
+    "vcpkg": {
+        "exec": "vcpkg",
+        "use_external": false,
+        "path": "D:\\tools\\mct\\vcpkg",
+        "repo_uri": "https://github.com/microsoft/vcpkg.git",
+        "disable_metrics": true,
+        "has_been_installed": false,
+        "package-group-triplets": {}
+    },
+    "git": {
+        "exec": "git"
+    },
+    "toolchain": {
+        "use_global": false,
+        "use_local": true,
+        "user_toolchain_values": {},
+        "private_toolchain_files": []
+    }
+}

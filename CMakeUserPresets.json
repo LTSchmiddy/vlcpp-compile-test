@@ -1,0 +1,35 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "mct-user-default",
+            "binaryDir": "${sourceDir}/build",
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "D:/git-repos/experiments/vlcpp-compile-test/mct_user_toolchain.cmake"
+            }
+        },
+        {
+            "name": "x64-windows-DEBUG",
+            "inherits": [
+                "mct-user-default",
+                "mct-default"
+            ],
+            "displayName": "x64-windows-DEBUG",
+            "description": "MCT Configure Preset for x64-windows-DEBUG",
+            "binaryDir": "${sourceDir}/build/x64-windows-DEBUG",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x64-windows",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "x64-windows-DEBUG",
+            "displayName": "x64-windows-DEBUG",
+            "description": "MCT Build Preset for x64-windows-DEBUG",
+            "configurePreset": "x64-windows-DEBUG"
+        }
+    ]
+}
